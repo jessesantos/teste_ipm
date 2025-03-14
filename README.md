@@ -94,7 +94,7 @@ agenda-tarefas/
    ```
 
 3. Acesse a aplicação:
-   - Frontend: http://localhost
+   - Frontend: http://localhost:3000
    - Backend API: http://localhost:8000/api/tarefas
    - phpMyAdmin: http://localhost:8080 (usuário: agenda_user, senha: Dlf_d88Ff0asCC)
 
