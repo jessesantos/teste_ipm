@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16-alpine as build
 
 # Configurar diretório de trabalho
 WORKDIR /app
@@ -12,14 +12,20 @@ RUN npm install
 # Copiar arquivos do projeto
 COPY . .
 
-# Corrigir permissões para o diretório node_modules
-RUN mkdir -p node_modules/.cache && chmod -R 777 node_modules/.cache
+# Construir a aplicação para produção
+RUN npm run build
 
-# Definir usuário node para executar a aplicação
-USER node
+# Estágio de produção usando Nginx
+FROM nginx:alpine
 
-# Expor porta 3000
-EXPOSE 3000
+# Copiar arquivos de build para o diretório do Nginx
+COPY --from=build /app/build /usr/share/nginx/html
 
-# Iniciar aplicação React
-CMD ["npm", "start"]
+# Copiar configuração personalizada do Nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expor porta 80
+EXPOSE 80
+
+# Iniciar Nginx
+CMD ["nginx", "-g", "daemon off;"]
