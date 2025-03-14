@@ -65,7 +65,10 @@ agenda-tarefas/
 │   │   │   └── TarefasList.js
 │   │   ├── services/
 │   │   │   └── TarefaService.js
-│   │   └── App.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── index.css
+│   │   └── reportWebVitals.js
 │   ├── Dockerfile
 │   ├── package.json
 │   └── tailwind.config.js
@@ -146,6 +149,15 @@ A aplicação utiliza uma tabela principal `tarefas` com a seguinte estrutura:
 - Sanitização de dados de entrada
 - Tratamento adequado de erros
 
+## Solução de Problemas
+
+Se você encontrar o erro `Could not find a required file. Name: index.js`, verifique se os seguintes arquivos estão presentes no diretório `frontend/src`:
+- index.js
+- index.css
+- reportWebVitals.js
+
+Estes arquivos são necessários para a inicialização correta da aplicação React.
+
 ## Autor
 
-Jesse Santos
+Desenvolvido como parte de um projeto de avaliação técnica. 
