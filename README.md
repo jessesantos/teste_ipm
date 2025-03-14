@@ -148,4 +148,4 @@ A aplicação utiliza uma tabela principal `tarefas` com a seguinte estrutura:
 
 ## Autor
 
-Desenvolvido como parte de um projeto de avaliação técnica. 
+Jesse Santos
