@@ -161,5 +161,5 @@ Se você encontrar o erro `Could not find a required file. Name: index.js`, veri
 Estes arquivos são necessários para a inicialização correta da aplicação React.
 
 ## Autor
-Jesse Santos
+Jesse Santos  
 Desenvolvido como parte de um projeto de avaliação técnica. 
