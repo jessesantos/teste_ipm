@@ -142,6 +142,8 @@ A aplicação utiliza uma tabela principal `tarefas` com a seguinte estrutura:
 - Feedback visual para o usuário (loading, mensagens de sucesso/erro)
 - Interface responsiva para diferentes dispositivos
 
+![Print da tela](https://jc3.com.br/images/print_sys.png)
+
 ## Segurança
 
 - Validação de dados no backend e frontend
@@ -159,5 +161,5 @@ Se você encontrar o erro `Could not find a required file. Name: index.js`, veri
 Estes arquivos são necessários para a inicialização correta da aplicação React.
 
 ## Autor
-
+Jesse Santos
 Desenvolvido como parte de um projeto de avaliação técnica. 
